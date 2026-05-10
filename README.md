@@ -6,10 +6,10 @@
 - [Project Overview](#project-overview)
 - [Project Vision](#project-vision)
 - [Dataset Discription](#dataset-discription)
-- [Key Objectives](#key-ojectives)
+- [Key Objectives](#key-objectives)
 - [Technical skills](#technical-skills)
-- [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-(EDA))
-- [Machine Learning Pipeline](#machine-learing-pipeline)
+- [Exploratory Data Analysis](#exploratory-data-analysis)
+- [Machine Learning Pipeline](#machine-learning-pipeline)
 - [Major Insights & Findings](#major-insights--findings)
 - [Key Business & Healthcare Impact](#key-business--healthcare-impact)
 - [Project Structure](#project-structure)
@@ -78,25 +78,27 @@ By analyzing patient demographics, lifestyle risks, environmental exposure, trea
 
 # Key Objectives
 
-## 1. Exploratory Data Analysis (EDA)
+### 1. Exploratory Data Analysis (EDA)
 - Identify patterns and healthcare trends
 - Analyze cancer distribution across demographics
 - Visualize disparities across countries and age groups
 - Explore treatment cost variations
 - Study survival trends and cancer severity
 
-## 2. Statistical & Inferential Analysis
+### 2. Statistical & Inferential Analysis
 - Examine relationships between risk factors and severity score
 - Analyze early-stage diagnosis distribution
 - Evaluate treatment cost burden globally
 - Study the relationship between treatment cost and survival years
 
-## 3. Predictive Analytics & Machine Learning
+### 3. Predictive Analytics & Machine Learning
 
 - Predict cancer severity using machine learning
 - Identify the most influential healthcare risk factors
 - Evaluate feature importance using Random Forest Regression
 - Optimize model performance using GridSearchCV
+
+---
 
 # Technical skills
 | Technology | Purpose |
@@ -112,10 +114,10 @@ By analyzing patient demographics, lifestyle risks, environmental exposure, trea
 
 ---
 
-# Exploratory Data Analysis (EDA)
+# Exploratory Data Analysis
 *The project performs extensive EDA to understand healthcare patterns and patient characteristics.*
 
-## Visualizations Performed
+### Visualizations Performed
 
 *Distribution Analysis*
 - Age Distribution (Histogram + KDE)
@@ -244,9 +246,19 @@ Global-Cancer-Healthcare-Analytics/
 │   ├── correlation_heatmap.png
 │   └── dashboard.png
 │
-│
 └── Models/
 ```
+
+---
+
+# Future Improvements
+**Potential future enhancements include:**
+- Survival prediction models
+- Real-time healthcare analytics
+- Power BI integration
+- SQL database integration
+
+---
 
 # Skills Demonstrated
 ### Data Analytics
@@ -288,6 +300,7 @@ Global-Cancer-Healthcare-Analytics/
 ***Aspiring Data Analyst | Python | SQL | Power BI | Machine Learning | Healthcare Analytics***
 
 ### If you found this project useful, feel free to star the repository.
+
 
 
 
