@@ -295,11 +295,14 @@ Global-Cancer-Healthcare-Analytics/
 
 ---
 
-# Author
+# Author & Contact
 
 ***Aspiring Data Analyst | Python | SQL | Power BI | Machine Learning | Healthcare Analytics***
 
+*junaidyusuf243@gmail.com*
+
 ### If you found this project useful, feel free to star the repository.
+
 
 
 
