@@ -18,10 +18,9 @@
 - [Conclusion](#conclusion)
 - [Author & Contact](#Author&Contact)
 
-## If you found this project useful, feel free to star the repository.
+### If you found this project useful, feel free to star the repository.
 
 ---
-
 # Project Overview
 This project focuses on analyzing global cancer patient data to uncover meaningful healthcare insights, treatment disparities, survival trends, and economic burdens associated with cancer treatment.
 
@@ -34,8 +33,9 @@ Using a dataset of 50,000+ cancer patient records collected between 2015 and 202
 - Predictive Analytics
 
 The goal is to transform raw healthcare data into actionable insights that support better clinical understanding and healthcare decision-making reagrding cancer treatment.
----
 
+
+---
 # Project Vision
 This healthcare analytics project aims to bridge the gap between raw medical data and data-driven healthcare decisions.
 
@@ -48,7 +48,6 @@ By analyzing patient demographics, lifestyle risks, environmental exposure, trea
 - Country-wise variations in treatment costs
 
 ---
-
 # Dataset Discription
 
 ## The dataset contains detailed healthcare and cancer-related information including:
@@ -79,12 +78,40 @@ By analyzing patient demographics, lifestyle risks, environmental exposure, trea
 
 # Key Objectives
 
-## 1️⃣ Exploratory Data Analysis (EDA)
+## 1. Exploratory Data Analysis (EDA)
 - Identify patterns and healthcare trends
 - Analyze cancer distribution across demographics
 - Visualize disparities across countries and age groups
 - Explore treatment cost variations
 - Study survival trends and cancer severity
+
+## 2. Statistical & Inferential Analysis
+- Examine relationships between risk factors and severity score
+- Analyze early-stage diagnosis distribution
+- Evaluate treatment cost burden globally
+- Study the relationship between treatment cost and survival years
+
+## 3. Predictive Analytics & Machine Learning
+
+- Predict cancer severity using machine learning
+- Identify the most influential healthcare risk factors
+- Evaluate feature importance using Random Forest Regression
+- Optimize model performance using GridSearchCV
+
+# Technical skills
+| Technology | Purpose |
+|---|---|
+| Python | Data Analytics & Machine Leaning |
+| Pandas | Data Cleaning & Manipulation |
+| Numpy | Numerical Computation |
+| Matplotlib | Data Visualization |
+| Seaborn | Statistical Visualization |
+| Scikit Learn | Machine Learning Models |
+| Jupyter Notebooks | Development Environment |
+| Git & GitHub | Version Control & Project Hosting |
+
+
+
 
 
 
