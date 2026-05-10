@@ -110,6 +110,67 @@ By analyzing patient demographics, lifestyle risks, environmental exposure, trea
 | Jupyter Notebooks | Development Environment |
 | Git & GitHub | Version Control & Project Hosting |
 
+---
+
+# Exploratory Data Analysis (EDA)
+*The project performs extensive EDA to understand healthcare patterns and patient characteristics.*
+
+## Visualizations Performed
+
+*Distribution Analysis*
+- Age Distribution (Histogram + KDE)
+- Treatment Cost Distribution (Histogram + KDE)
+- Survival Year Analysis
+
+*Categorical Analysis*
+- Gender Distribution (Bar Graph)
+- Cancer Type Distribution (Bar Graph)
+- Cancer Stage Distribution (Bar Graph)
+- Country-wise Patient Analysis (Pie Graph)
+
+*Comparative Analysis*
+- Treatment Cost by Country & Gender
+- Age Group vs Treatment Cost
+- Country-wise Economic Burden Heatmap
+
+*Correlation & Relationship Analysis*
+- Risk Factors vs Cancer Severity
+- Smoking vs Severity
+- Obesity vs Severity
+- Genetic Risk vs Severity
+- Air Pollution vs Severity
+
+---
+
+# Machine Learning Pipeline
+*The project includes a complete machine learning workflow to predict cancer severity.*
+
+## Workflow Steps
+
+## 1.Data Preprocessing
+- Converted categorical variables into numerical values using Label Encoding
+- Removed unnecessary columns
+- Split dataset into training and testing data
+
+## 2. Model Training
+### Implemented:
+- Random Forest Regressor
+
+## 3. Hyperparameter Tuning
+### Used:
+- GridSearchCV for model optimization.
+
+## 4. Model Evaluation
+### Evaluated model performance using:
+- R² Score
+
+## 5. Feature Importance Analysis
+### Identified the most important predictors influencing:
+- Cancer Severity
+- Survival Outcomes
+
+---
+
 
 
 
