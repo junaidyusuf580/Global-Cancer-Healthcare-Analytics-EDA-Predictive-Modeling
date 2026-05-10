@@ -147,29 +147,153 @@ By analyzing patient demographics, lifestyle risks, environmental exposure, trea
 
 ## Workflow Steps
 
-## 1.Data Preprocessing
+### 1. Data Preprocessing
 - Converted categorical variables into numerical values using Label Encoding
 - Removed unnecessary columns
 - Split dataset into training and testing data
 
-## 2. Model Training
-### Implemented:
+### 2. Model Training
+**Implemented:**
 - Random Forest Regressor
 
-## 3. Hyperparameter Tuning
-### Used:
+### 3. Hyperparameter Tuning
+**Used:**
 - GridSearchCV for model optimization.
 
-## 4. Model Evaluation
-### Evaluated model performance using:
+### 4. Model Evaluation
+**Evaluated model performance using:**
 - R² Score
 
-## 5. Feature Importance Analysis
-### Identified the most important predictors influencing:
+### 5. Feature Importance Analysis
+**Identified the most important predictors influencing:**
 - Cancer Severity
 - Survival Outcomes
 
 ---
+
+# Major Insights & Findings
+### Geographic Disparities in Healthcare Costs
+
+**Cancer treatment costs are significantly higher in developed countries such as:**
+- United States
+- Australia
+- China
+
+**While countries below show relatively lower treatment costs.**
+
+- India
+- Pakistan
+
+This highlights global inequalities in healthcare affordability and accessibility.
+
+### Gender-Based Treatment Cost Patterns
+The analysis revealed minimal differences in treatment costs between male and female patients. This suggests relatively uniform healthcare pricing and treatment access across genders.
+
+### Age-Based Increase in Treatment Costs
+*Older age groups, especially patients aged 61+, experience significantly higher treatment costs.*
+
+***Possible reasons include:***
+- Intensive medical care
+- Longer treatment duration
+- Multiple health complications
+- Higher hospitalization needs
+
+### Role of Healthcare Systems
+*Countries with stronger public healthcare systems such as:*
+- Canada
+- Germany
+- United Kingdom
+*show more stable treatment costs across age groups. This demonstrates how healthcare policies and government support can reduce financial burden on patients.*
+
+### Risk Factors Influence Cancer Severity
+*Statistical analysis, given below, indicates that all contribute to increased cancer severity:*
+
+- Smoking
+- Genetic Risk
+- Obesity
+- Air Pollution
+- Alcohol Consumption
+
+# Key Business & Healthcare Impact
+***This project can help:***
+
+- Healthcare analysts understand patient trends.
+- Hospitals improve treatment planning.
+- Governments identify healthcare inequalities.
+- Researchers study risk factor impacts.
+- Insurance companies evaluate healthcare costs.
+
+---
+
+# Project Structure
+
+```bash
+Global-Cancer-Healthcare-Analytics/
+│
+├── README.md
+├── requirements.txt
+├── data/
+│   ├── raw_data.csv
+│   └── Examine data.csv
+│
+├── Notebooks/
+│   ├── exploratory_data_analysis.ipynb
+│   └── machine_learning_model.ipynb
+│
+├── visualizations/
+│   ├── correlation_heatmap.png
+│   └── dashboard.png
+│
+│
+└── Models/
+```
+
+# Skills Demonstrated
+### Data Analytics
+- EDA
+- Data Preprocessing
+- Statistical Analysis
+- Data Visualization
+
+### Machine Learning
+- Regression Modeling
+- Hyperparameter Tuning
+- Feature Engineering
+- Model Evaluation
+
+### Technical Skills
+- Python Programming
+- Pandas
+- Seaborn
+- Matplotlib
+- Scikit-learn
+- Git & GitHub
+
+# Conclusion
+
+*This project demonstrates how healthcare analytics and machine learning can uncover valuable insights from cancer patient data.*
+
+**By combining statistical analysis, visualization, and predictive modeling, the project highlights:**
+- Economic disparities in healthcare
+- Risk factors influencing cancer severity
+- Treatment cost patterns
+- Importance of healthcare accessibility
+
+**The analysis provides a strong foundation for future healthcare research, predictive systems, and policymaking initiatives.**
+
+---
+
+# Author
+
+***Aspiring Data Analyst | Python | SQL | Power BI | Machine Learning | Healthcare Analytics***
+
+### If you found this project useful, feel free to star the repository.
+
+
+
+
+
+
 
 
 
