@@ -1,5 +1,7 @@
 # Global Cancer Healthcare Analytics - EDA & Predictive Modeling
 
+*Analyzing Cancer Risk Factors to evaluate Severity and Survival outcomes using Data Analytics and Machine Learning*
+
 ## Table of Contents
 - [Overview](#overview)
 - [Business Problem](#business-problem)
@@ -11,6 +13,7 @@
 - [Key Findings](#key-findings)
 - [Dashboard](#dashboard)
 - [Conclusion](#conclusion)
+- [Author & Contact](#Author&Contact)
 
 ---------------------------------------------------------------------------------------------
 
@@ -19,12 +22,15 @@ This project focuses on analyzing global cancer patient data to uncover meaningf
 
 Using a dataset of 50,000+ cancer patient records collected between 2015 and 2024, this projectcombines:
 
--Exploratory Data Analysis (EDA)
--Statistical Analysis
--Data Visualization
--Machine Learning
--Predictive Analytics
+- Exploratory Data Analysis (EDA)
+- Statistical Analysis
+- Data Visualization
+- Machine Learning
+- Predictive Analytics
 
 The goal is to transform raw healthcare data into actionable insights that support better clinical understanding and healthcare decision-making.
+
+
+
 
 
