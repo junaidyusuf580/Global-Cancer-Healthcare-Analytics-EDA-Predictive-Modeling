@@ -1,18 +1,5 @@
-| Column Name             | Data Type         | Category                    | Description                                                                          |
-| ----------------------- | ----------------- | --------------------------- | ------------------------------------------------------------------------------------ |
-| `Patient_ID`            | Object (String)   | Categorical                 | Unique identification number assigned to each cancer patient.                        |
-| `Age`                   | Integer (`int64`) | Numerical                   | Age of the patient in years.                                                         |
-| `Gender`                | Object (String)   | Categorical                 | Gender of the patient such as Male, Female, or Other.                                |
-| `Country_Region`        | Object (String)   | Categorical                 | Country or region where the patient belongs.                                         |
-| `Year`                  | Integer (`int64`) | Numerical                   | Year in which the patient record was captured (2015–2024).                           |
-| `Genetic_Risk`          | Float (`float64`) | Numerical                   | Genetic predisposition score indicating inherited cancer risk level.                 |
-| `Air_Pollution`         | Float (`float64`) | Numerical                   | Air pollution exposure score affecting patient health condition.                     |
-| `Alcohol_Use`           | Float (`float64`) | Numerical                   | Alcohol consumption level score of the patient.                                      |
-| `Smoking`               | Float (`float64`) | Numerical                   | Smoking habit intensity/risk score.                                                  |
-| `Obesity_Level`         | Float (`float64`) | Numerical                   | Obesity or body-fat-related risk score.                                              |
-| `Cancer_Type`           | Object (String)   | Categorical                 | Type of cancer diagnosed (e.g., Lung, Breast, Skin, Leukemia, Colon).                |
-| `Cancer_Stage`          | Object (String)   | Categorical                 | Stage of cancer progression (Stage 0, I, II, III, IV).                               |
-| `Treatment_Cost_USD`    | Float (`float64`) | Numerical                   | Estimated treatment expenditure in US Dollars.                                       |
-| `Survival_Years`        | Float (`float64`) | Numerical                   | Estimated survival duration after diagnosis in years.                                |
-| `Target_Severity_Score` | Float (`float64`) | Numerical (Target Variable) | Overall severity score representing cancer risk intensity and condition seriousness. |
+# Datasets Description
+|Column Name| Data Type| Category| Description |                                                                        							
+|Patient_ID`|	Object (String)	Categorical	Unique identification number assigned to each cancer patient.|                        							
+
 
