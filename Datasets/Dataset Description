@@ -15,3 +15,4 @@
 | `Treatment_Cost_USD`    | Float (`float64`) | Numerical                   | Estimated treatment expenditure in US Dollars.                                       |
 | `Survival_Years`        | Float (`float64`) | Numerical                   | Estimated survival duration after diagnosis in years.                                |
 | `Target_Severity_Score` | Float (`float64`) | Numerical (Target Variable) | Overall severity score representing cancer risk intensity and condition seriousness. |
+
