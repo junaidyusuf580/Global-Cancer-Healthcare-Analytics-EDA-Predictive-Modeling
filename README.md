@@ -79,11 +79,11 @@ By analyzing patient demographics, lifestyle risks, environmental exposure, trea
 # Key Objectives
 
 ### 1. Exploratory Data Analysis (EDA)
-- Identify patterns and healthcare trends
-- Analyze cancer distribution across demographics
+- Identify primary key column, duplicacy and understand pattern.
+- Analyze cancer distribution across demographics regarding age and gender.
 - Visualize disparities across countries and age groups
-- Explore treatment cost variations
-- Study survival trends and cancer severity
+- Explore treatment cost variations amoung countries.
+- Study survival trends and cancer severity.
 
 ### 2. Statistical & Inferential Analysis
 - Examine relationships between risk factors and severity score
@@ -232,21 +232,21 @@ The analysis revealed minimal differences in treatment costs between male and fe
 ```bash
 Global-Cancer-Healthcare-Analytics/
 │
-├── README.md
-├── requirements.txt
 ├── data/
-│   ├── raw_data.csv
-│   └── Examine data.csv
+│   ├── Datasets Description.md
+│   └── Datafile.csv
 │
 ├── Notebooks/
 │   ├── exploratory_data_analysis.ipynb
 │   └── machine_learning_model.ipynb
 │
-├── visualizations/
-│   ├── correlation_heatmap.png
-│   └── dashboard.png
+├── Visualizations/
+│   ├── Matpotlib
+│   └── Seaborn
+│   └── Linear Regression
 │
-└── Models/
+│
+└─ README.md
 ```
 
 ---
