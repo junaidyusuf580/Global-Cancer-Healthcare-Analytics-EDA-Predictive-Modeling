@@ -1,10 +1,3 @@
-# %% [markdown]
-# # Global Cancer Healthcare Analytics - EDA & Predictive Modeling
-
-# %% [markdown]
-# **Analyzing Cancer Risk Factors to evaluate Severity and Survival outcomes using Data Analytics and Machine Learning**
-
-# %%
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -13,32 +6,27 @@ import random
 import warnings
 warnings.filterwarnings('ignore')
 
-# %%
 #Load File "global_cancer_patients_2015_2024" 
 health= pd.read_csv(r"C:\Users\Mohd Junaid\Downloads\global_cancer_patients_2015_2024 (1).csv")
 
-# %%
 #Data Overview
 health.head()
 
-# %%
 #Overview of Data structure and dtypes 
-health.info()
-
-# %%
+health.info() 
 health.duplicated().sum()
 #Data has no null values , no duplicate values and no messy data which is now ideal for analysis. 
 
-# %% [markdown]
-# # Exploratory Data Analysis (EDA)
+   
+# Exploratory Data Analysis (EDA)
 
-# %% [markdown]
+   
 # **Statistical summary of Age**
 
-# %%
+ 
 health['Age'].describe()
 
-# %%
+ 
 **Inference on Age column dataset**
 Average Mean is 54 years
 Min-Max value= Mostly age is between 20 to 89 years young adult to aged person
@@ -46,7 +34,7 @@ Std deviation from mean= 20
 Interquartile range= 35((Q1) to 72 (Q3))
 This suggests a broad representation of both young and elderly patients in the dataset, which supports age-based comparative analysis.
 
-# %%
+ 
 #Visualization of Age through Histogram and KDE
 
 plt.figure(figsize=(10,5))
@@ -63,13 +51,13 @@ plt.tight_layout()
 plt.show
 
 
-# %% [markdown]
+   
 # **Gender Analysis**
 
-# %%
+ 
 health['Gender'].value_counts()
 
-# %%
+ 
 #Gender visualization through Barplot
 sns.barplot(x= health['Gender'].value_counts().index, y= health['Gender'].value_counts().values, 
             palette= ['blue', 'pink','green'])
@@ -84,18 +72,18 @@ plt.ylabel("Count")
 
 
 
-# %%
+ 
 #Inference
 The dataset contains three gender categories(Male, Female ,other) with the most common being Male (16,796 records).
 Gender dataset is uniformly distributed with minimal variance between them.
 
-# %% [markdown]
+   
 # **Country_Region Analysis**
 
-# %%
+ 
 health['Country_Region'].value_counts()
 
-# %%
+ 
 #Country_Region wise visualization
 country_t= health['Country_Region'].value_counts()
 
@@ -109,18 +97,18 @@ plt.title('Region_Wise_Distribution')
 plt.show()
 
 
-# %%
+ 
 #Inference
 As per visualisation which shows that the Patients come from 10 different countries/regions, with Australia represent higher percentage (5,092 patients counts) and Canada showing lower. Number of data points for each country is almost same with minimum difference.This diversity enables cross-country comparison of cancer outcomes and treatment economic.
 
 
-# %% [markdown]
+   
 # **Cancer_type analysis**
 
-# %%
+ 
 health['Cancer_Type'].value_counts()
 
-# %%
+ 
 #Cancer_type visualization(category)
 
 plt.figure(figsize=[10,5])
@@ -133,20 +121,20 @@ plt.title("CancerType_counts")
 plt.xlabel("Cancer_type")
 plt.ylabel("Counts")
 
-# %%
+ 
 Inference:
 Above visulization shows that all cancer types in the dataset are nearly equally distributed, showing minimal variance across categories. 
 This balanced distribution is ideal for analysis and the development of machine learning models, as it helps prevent bias toward any specific category.
 Colon cancer has the highest occurrence, although the difference compared to other categories is marginal, while lung cancer has the lowest occurrence.
         
 
-# %% [markdown]
+   
 # **Cancer_Stage analysis**
 
-# %%
+ 
 health['Cancer_Stage'].value_counts()
 
-# %%
+ 
 #Cancer_Stage's visualization
 plt.figure(figsize= [10,5])
 sns.barplot(x=health['Cancer_Stage'].value_counts().index,
@@ -163,30 +151,30 @@ plt.show()
 
             
 
-# %%
+ 
 Inference:
 Here the Stage II shows the highest occurrence while Stage 0 shows the low occurrence with marginal variance. 
 This visualization shows that the dataset is uniformaly distributed accros all stages with minimal variances in counts. 
 The balance distribution of the dataset across is ideal for analysis and machine learning, as it prevents bias toward any particular stage.”
 
 
-# %% [markdown]
+   
 # **Treatment_Cost_USD_ analysis(numerical)**
 
-# %%
+ 
 health['Treatment_Cost_USD'].describe()
 
-# %%
+ 
 #About Skewness
 
 round(health['Treatment_Cost_USD'].skew(),4).item()
 
 
-# %%
+ 
 #Inference
 The skew value is close to zero which means the dataset is almost symmetrically distributed. 
 
-# %%
+ 
 #plotting for Treatment_Cost_USD
 
 plt.figure(figsize=[10,5])
@@ -205,34 +193,34 @@ plt.show()
 
 
 
-# %%
+ 
 #Inference
 Above histogram shows a uniform distribution with wide spread.
 While KDE confirms no skewness in the dataset or we can say platykurtic.
 
-# %% [markdown]
+   
 # **Analysis of risk factors(independent Variable)**
 
-# %%
+ 
 health.columns
 risk_factors= ['Genetic_Risk','Air_Pollution', 'Alcohol_Use', 'Smoking', 'Obesity_Level', 'Treatment_Cost_USD']
 summary= health[risk_factors].agg(['mean', 'std','min','max']).T
 summary
 
-# %%
+ 
 #Inference
 There are five risk factors ('Genetic_Risk','Air_Pollution', 'Alcohol_Use', 'Smoking', 'Obesity_Level', 'Treatment_Cost_USD') and these are
 uniformly distributed with similar means and standard deviations, indicating a balanced dataset with consistent variabilty as shown above.
 In contrast 'Treatment_Cost_USD' shows a high variabilty with a wide range from 5000 to 100000 suggesting significant difference in treatment cost
 Overall, the dataset appears clean and well-suited for analysis and modeling.
 
-# %% [markdown]
+   
 # # Statistical & Inferential Analysis
 
-# %% [markdown]
+   
 # **Determine the relationship between risk factors and cancer severity.**
 
-# %%
+ 
 from scipy.stats import linregress
 
 risk_factors= ['Genetic_Risk','Air_Pollution', 'Alcohol_Use', 'Smoking', 'Obesity_Level']
@@ -264,7 +252,7 @@ plt.show()
 
 
 
-# %% [markdown]
+   
 # **To understand the contribution of various risk factors to cancer severity, line plots were generated for five primary variables:**  *Genetic Risk, Air Pollution, Alcohol Use, Smoking, and Obesity Level, plotted against the Target Severity Score.*
 # 
 # **All graphs reveal a positive relationship, indicating that as the level of a particular risk factor increases, the corresponding severity of the condition also tends to rise. However, the degree of association—measured by the slope and tightness of the confidence interval—varies across factors.**
@@ -297,7 +285,7 @@ plt.show()
 # A positive slope, indicating a slight increase in the severity score as obesity level increases. However, due to the very low R², this is a weak and unreliable relationship.
 # 
 
-# %%
+ 
 Key Takeaways:
 Weak Linear Relationships:
 The R² values for all risk factors are relatively low, ranging from 0.06 to 0.23 
@@ -309,14 +297,14 @@ Relationship between variables is linear.Data points are closely aligned around 
 
 
 
-# %% [markdown]
+   
 # **Analyze the proportion of early-stage diagnoses by cancer type?**
 
-# %%
+ 
 #Unique colums name
 health['Cancer_Type'].unique()
 
-# %%
+ 
 #Diagnosis of Lung in early stage percentage
 count_stages=health[health['Cancer_Type']== 'Lung']['Cancer_Stage'].value_counts()	
 early_stage= count_stages.get('Stage 0',0)+count_stages.get('Stage I',0)
@@ -325,7 +313,7 @@ proportion= (early_stage/Total_count_stages)*100
 prop= round(proportion, ndigits=2)
 print(f"Proportion of lung cancer diagnosed at early stage 0 and stage I: {prop}")
 
-# %%
+ 
 #Diagnosis of Leukemia in early stage percentage
 count_stages=health[health['Cancer_Type']== 'Leukemia']['Cancer_Stage'].value_counts()	
 early_stage= count_stages.get('Stage 0',0)+count_stages.get('Stage I',0)
@@ -334,7 +322,7 @@ proportion= (early_stage/Total_count_stages)*100
 prop= round(proportion, ndigits=2)
 print(f"Proportion of Leukemia cancer diagnosed at early stage 0 and stage I: {prop}")
 
-# %%
+ 
 #Diagnosis of Breast in early stage percentage
 count_stages=health[health['Cancer_Type']== 'Breast']['Cancer_Stage'].value_counts()	
 early_stage= count_stages.get('Stage 0',0)+count_stages.get('Stage I',0)
@@ -343,7 +331,7 @@ proportion= (early_stage/Total_count_stages)*100
 prop= round(proportion, ndigits=2)
 print(f"Proportion of Breast cancer diagnosed at early stage 0 and stage I: {prop}")
 
-# %%
+ 
 #Diagnosis of Colon in early stage percentage
 count_stages=health[health['Cancer_Type']== 'Colon']['Cancer_Stage'].value_counts()	
 early_stage= count_stages.get('Stage 0',0)+count_stages.get('Stage I',0)
@@ -352,7 +340,7 @@ proportion= (early_stage/Total_count_stages)*100
 prop= round(proportion, ndigits=2)
 print(f"Proportion of Colon cancer diagnosed at early stage 0 and stage I: {prop}")
 
-# %%
+ 
 #Diagnosis of Skin in early stage percentage
 count_stages=health[health['Cancer_Type']== 'Skin']['Cancer_Stage'].value_counts()	
 early_stage= count_stages.get('Stage 0',0)+count_stages.get('Stage I',0)
@@ -361,7 +349,7 @@ proportion= (early_stage/Total_count_stages)*100
 prop= round(proportion, ndigits=2)
 print(f"Proportion of Skin cancer diagnosed at early stage 0 and stage I: {prop}")
 
-# %%
+ 
 #Diagnosis of Cervical in early stage percentage
 count_stages=health[health['Cancer_Type']== 'Cervical']['Cancer_Stage'].value_counts()	
 early_stage= count_stages.get('Stage 0',0)+count_stages.get('Stage I',0)
@@ -370,7 +358,7 @@ proportion= (early_stage/Total_count_stages)*100
 prop= round(proportion, ndigits=2)
 print(f"Proportion of Cervical cancer diagnosed at early stage 0 and stage I: {prop}")
 
-# %%
+ 
 #Diagnosis of Prostate in early stage percentage
 count_stages=health[health['Cancer_Type']== 'Prostate']['Cancer_Stage'].value_counts()	
 early_stage= count_stages.get('Stage 0',0)+count_stages.get('Stage I',0)
@@ -379,7 +367,7 @@ proportion= (early_stage/Total_count_stages)*100
 prop= round(proportion, ndigits=2)
 print(f"Proportion of Prostate cancer diagnosed at early stage 0 and stage I: {prop}")
 
-# %%
+ 
 #Diagnosis of Liver in early stage percentage
 count_stages=health[health['Cancer_Type']== 'Liver']['Cancer_Stage'].value_counts()	
 early_stage= count_stages.get('Stage 0',0)+count_stages.get('Stage I',0)
@@ -387,14 +375,14 @@ Total_count_stages= count_stages.sum()
 proportion= (early_stage/Total_count_stages)*100
 print(f"Proportion of Liver cancer diagnosed at early stage 0 and stage I: {proportion}")
 
-# %% [markdown]
+   
 # Above analysis show that early-stage diagnosis for various cancer types is relatively widespread, with most cancers having an early diagnosis rate between 38.43% and 40.61%. Liver Cancer shows the highest proportion, while Lung Cancer shows the lowest. These findings suggest that while screening and diagnostic methods are effective, improvements can still be made, particularly in lung cancer detection.
 # 
 
-# %% [markdown]
+   
 # **Identify key predictors of cancer severity and survival years through "Karl Pearson and Spearman".**
 
-# %%
+ 
 #Independent variable and dependent variable
 features= ['Age', 'Genetic_Risk','Air_Pollution', 'Alcohol_Use', 'Smoking', 'Obesity_Level']
 targets= ['Survival_Years', 'Target_Severity_Score']
@@ -411,7 +399,7 @@ spearman_result= spearman_corr[targets]
 correlation_data= pd.concat([pearson_result, spearman_result], axis=1, keys=["Pearson","Spearman"])
 correlation_data
 
-# %%
+ 
 ## Correlation Analysis Summary regarding 'Target_Severity_Score' vs 'Risk Factors'##
 
 | Feature       | Pearson (Severity) | Spearman (Severity) | Interpretation                                               |
@@ -424,24 +412,24 @@ correlation_data
 | Obesity_Level | 0.251              | 0.243               | Weak to moderate → Obesity has some impact                   |
 
 
-# %%
+ 
 ##Overall inference
 The analysis shows that survival years are not strongly influenced by the selected features. However, cancer severity is moderately influenced by smoking, genetic risk, air pollution, and alcohol use. The similarity between Pearson and Spearman results suggests linear relationships with minimal impact from outliers.
 
-# %% [markdown]
+   
 # # Predictive Analytics & Machine Learning
 
-# %% [markdown]
+   
 # **_Key Identifier predictors of cancer severity through machine learning pipeline_**
 
-# %%
+ 
 # random forest for target severity score
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.preprocessing import LabelEncoder
 from sklearn.metrics import r2_score
 
-# %%
+ 
 #converting categorical columns into numerical
 catergorical_cols= ['Gender', 'Country_Region', 'Cancer_Type', 'Cancer_Stage']
 for cols in catergorical_cols:
@@ -469,12 +457,12 @@ test_r2_severity= r2_score(Y_test_s, model.predict(X_test_s))
 
 
 
-# %%
+ 
 print(train_r2_severity)
 print(test_r2_severity)
 
 
-# %%
+ 
 feature_importance_sevrity= pd.Series(model.feature_importances_, index= x.columns).sort_values(ascending= True)
 
 #plotting of important features
@@ -488,7 +476,7 @@ plt.tight_layout()
 plt.show()
            
 
-# %% [markdown]
+   
 # **Feature	Importance	Interpretation**
 # *Smoking	0.2336 most important predictor of severity score. The more a patient smokes, the higher their severity tends to be.*
 # 
@@ -507,14 +495,14 @@ plt.show()
 # **E.g., Smoking, Genetic Risk, AIr plollution are major influencers. These tells us if these is control on these factors that might reduce severity.**
 # 
 
-# %% [markdown]
+   
 # # Check whether these risk-factors influence on Survival_Years apart from Target_Severity_Score.
 # 
 
-# %%
+ 
 health.head()
 
-# %%
+ 
 
 # conveting categorical columns to numerical columns
 categorical_cols= ["Gender","Country_Region","Cancer_Type","Cancer_Stage"]
@@ -539,7 +527,7 @@ param_grid = {
 
 
 
-# %%
+ 
 # train the model
 model= RandomForestRegressor(random_state=40)
 GSC= GridSearchCV(model , param_grid, cv=3, scoring="r2", n_jobs=-1)
@@ -551,50 +539,50 @@ best_rf_severity= GSC.best_estimator_
 train_r2_severity= r2_score(y_train_s , best_rf_severity.predict(X_train_s))
 test_r2_severity= r2_score(y_test_s , best_rf_severity.predict(X_test_s))
 
-# %%
+ 
 print(train_r2_severity)
 print(test_r2_severity)
 
-# %%
+ 
 "The above information predict that how long someone will survive that can not describe with the help these given predictors 
 as per the given model result. These factors have no influention on Survival_Years.
 
-# %% [markdown]
+   
 # # Explore the economic burden of cancer treatment across different demographics and countries
 
-# %%
+ 
 health= pd.read_csv(r"C:\Users\Mohd Junaid\Downloads\global_cancer_patients_2015_2024 (1).csv")
 
-# %%
+ 
 health.head()
 
-# %%
+ 
 health['Age_group']=pd.cut(health['Age'], bins=[0,30,45,60,75,90], labels=['0-30', '31-45','46-60','61-75','76+'])
 
-# %%
+ 
 health.head()
 
-# %%
+ 
 country_age_cost=health.groupby(['Age_group', 'Age','Country_Region','Gender'], observed= False)['Treatment_Cost_USD'].mean().reset_index()
 
-# %%
+ 
 plt.figure(figsize=(20,10))
 sns.barplot(data=country_age_cost, x='Country_Region', y='Treatment_Cost_USD', hue='Gender')
 plt.title("Average cancer treatment cost by country and gender")
 plt.show()
 
-# %%
+ 
 # Check with the heatmap
 country_age_cost=health.groupby(['Age_group', 'Age','Country_Region','Gender'], observed= False)['Treatment_Cost_USD'].mean().reset_index()
 health_heatmap=country_age_cost.pivot_table(index='Age_group', columns='Country_Region', values= 'Treatment_Cost_USD', aggfunc='mean')
 
-# %%
+ 
 plt.figure(figsize=(15,5))
 sns.heatmap(data=health_heatmap, annot=True, fmt='0.0f')
 plt.title("Treatment_Cost_USD burden on Demographic_region")
 plt.show()
 
-# %% [markdown]
+   
 # **_Geographic Disparities in Economic Burden:_**
 # *Cancer treatment costs are significantly higher in developed nations such as the USA, Australia, and China, revealing the heavy financial load in advanced healthcare systems. 
 # Meanwhile, countries like India and Pakistan exhibit comparatively lower costs, likely due to lower healthcare pricing structures or limited access to advanced treatment. 
@@ -618,7 +606,7 @@ plt.show()
 # 
 #     
 
-# %% [markdown]
+   
 # # Overall Conclusion
 # **The study shows that:**
 # 1. Cancer treatment can become a major financial burden.
@@ -627,15 +615,7 @@ plt.show()
 # 
 # 3. Gender has very little effect on treatment cost.
 # 
-# 4. Strong public healthcare systems help make treatment more affordable and fair for patients.
-# 
-# 
-#    
-# 
-# 
-# 
-
-# %% [markdown]
+# 4. Strong public healthcare systems help make treatment more affordable and fair for patients.   
 # # Potential future enhancements include:
 # **Survival prediction models**
 # 
@@ -646,10 +626,10 @@ plt.show()
 # **SQL database integration**
 # 
 
-# %% [markdown]
+   
 # # END
 
-# %%
+ 
 
 
 
